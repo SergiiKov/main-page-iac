@@ -1,7 +1,7 @@
 import React from 'react';
 import Iac from '../components/iac/iac.component';
 import Dsmp from '../components/dsmp/dsmp.component';
-import Districts from '../components/districts/districts.component';
+import DistrictsList from '../components/districts-list/districts-list.component';
 
 import './main-page.styles.scss'
 
@@ -10,7 +10,7 @@ const MainPage = () =>{
         <div>
             <Dsmp />
             <Iac />
-            <Districts /> 
+            <DistrictsList /> 
         </div>
     );
 };
