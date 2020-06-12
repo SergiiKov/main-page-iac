@@ -2,7 +2,9 @@ export const districts = [
   {
     id: 1,
     name: 'test1',
-    webSite: 'www.test1'
+    webSite: 'www.test1',
+    image: `<img src={require('../../img/test.jpg')} />`,
+    test: 'test.jpg'
   },
   {
     id: 2,

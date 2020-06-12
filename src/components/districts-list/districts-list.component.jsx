@@ -6,7 +6,8 @@ import './districts-list.styles.scss'
 
 const DistrictsList = ({districts}) =>{
     const districtCardComponent = districts.map((district, i)=>{
-        return (<DistrictsCard 
+        return (<DistrictsCard
+        key={i} 
         id={districts[i].id} 
         name={districts[i].name} 
         webSite={districts[i].webSite} />
