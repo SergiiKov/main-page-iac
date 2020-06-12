@@ -7,10 +7,14 @@ import './main-page.styles.scss'
 
 const MainPage = () =>{
     return(
-        <div>
-            <Dsmp />
-            <Iac />
-            <DistrictsList districts={districts}  /> 
+        <div className='grid-container'>
+            <div className='grid-item'>
+                <Dsmp />
+                <Iac />
+            </div>
+            <div className='grid-item'>
+                <DistrictsList districts={districts}  /> 
+            </div>
         </div>
     );
 };
