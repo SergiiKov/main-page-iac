@@ -2,9 +2,11 @@ import React from 'react';
 import Iac from '../components/iac/iac.component';
 import Dsmp from '../components/dsmp/dsmp.component';
 import DistrictsList from '../components/districts-list/districts-list.component';
+import Header from '../components/header/header.component';
 import  SearchBox from '../components/serch-box/serch-box.component';
 import Scroll from '../components/scroll/scroll.component';
 import { districts } from '../components/districts';
+import { Switch, Route } from 'react-router-dom';
 
 import './main-page.styles.scss'
 
@@ -27,22 +29,28 @@ class MainPage extends React.Component {
         const filterDistricts = this.state.districts.filter(district => 
         district.name.toLowerCase().includes(searchField.toLowerCase()))
         return(
+            <div>
+                <div>
+                    <Header />
+                    <Switch>
+                        {/* <Route exact path='/' component={MainPage} /> */}     
+                    </Switch>
+                </div>
             <div className='grid-container'>
-            <div className='grid-item'>
-                <Dsmp />
-                <Iac />
-            </div>
-            <div className='grid-item'>
-                <SearchBox 
-                placeholder={'Введіть назву району'} 
-                handleChange={this.handleChange} />
-                <Scroll>
-                    <DistrictsList districts={filterDistricts}  /> 
-                </Scroll>
-               
-            </div>
-        </div> 
-          
+                <div className='grid-item'>
+                    <Dsmp />
+                    <Iac />
+                </div>
+                <div className='grid-item'>
+                    <SearchBox 
+                    placeholder={'Введіть назву району'} 
+                    handleChange={this.handleChange} />
+                    <Scroll>
+                        <DistrictsList districts={filterDistricts}  /> 
+                    </Scroll> 
+                </div>
+            </div> 
+        </div>
         )
     };
 }
