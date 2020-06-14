@@ -3,7 +3,7 @@ import Iac from '../components/iac/iac.component';
 import Dsmp from '../components/dsmp/dsmp.component';
 import DistrictsList from '../components/districts-list/districts-list.component';
 import  SearchBox from '../components/serch-box/serch-box.component';
-
+import Scroll from '../components/scroll/scroll.component';
 import { districts } from '../components/districts';
 
 import './main-page.styles.scss'
@@ -34,9 +34,12 @@ class MainPage extends React.Component {
             </div>
             <div className='grid-item'>
                 <SearchBox 
-                placeholder={'input test'} 
+                placeholder={'Введіть назву району'} 
                 handleChange={this.handleChange} />
-                <DistrictsList districts= {filterDistricts}  /> 
+                <Scroll>
+                    <DistrictsList districts={filterDistricts}  /> 
+                </Scroll>
+               
             </div>
         </div> 
           

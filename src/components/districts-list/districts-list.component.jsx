@@ -1,16 +1,16 @@
 import React from 'react';
 import DistrictsCard from '../district-card/district-card.component';
-// import SearchBox from '../serch-box/serch-box.component';
+
 import './districts-list.styles.scss'
 
 const DistrictsList = ({ districts }) => {
 
   return(
-    <div>
+    <div className='districts-list'>
        {
          districts.map( (user, i) =>{
           return(
-            <DistrictsCard className='districts-list'
+            <DistrictsCard
             key={i} 
             id={districts[i].id}  
             name={districts[i].name} 
