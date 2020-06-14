@@ -2,21 +2,46 @@ import React from 'react';
 import Iac from '../components/iac/iac.component';
 import Dsmp from '../components/dsmp/dsmp.component';
 import DistrictsList from '../components/districts-list/districts-list.component';
-import { districts } from  '../components/districts';
+import  SearchBox from '../components/serch-box/serch-box.component';
+
+import { districts } from '../components/districts';
+
 import './main-page.styles.scss'
 
-const MainPage = () =>{
-    return(
-        <div className='grid-container'>
+class MainPage extends React.Component {
+    constructor(){
+        super();
+
+        this.state = {
+            searchField:'',
+            districts: districts 
+        }
+    };
+
+    handleChange = e => {
+        this.setState({searchField: e.target.value});
+    }
+
+    render(){
+        const { searchField } = this.state;
+        const filterDistricts = this.state.districts.filter(district => 
+        district.name.toLowerCase().includes(searchField.toLowerCase()))
+        return(
+            <div className='grid-container'>
             <div className='grid-item'>
                 <Dsmp />
                 <Iac />
             </div>
             <div className='grid-item'>
-                <DistrictsList districts={districts}  /> 
+                <SearchBox 
+                placeholder={'input test'} 
+                handleChange={this.handleChange} />
+                <DistrictsList districts= {filterDistricts}  /> 
             </div>
-        </div>
-    );
-};
+        </div> 
+          
+        )
+    };
+}
 
 export default MainPage;
