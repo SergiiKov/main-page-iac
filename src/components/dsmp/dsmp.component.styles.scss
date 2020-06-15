@@ -1,0 +1,26 @@
+.img-main-page{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center; 
+    }
+
+    .dsmp-item{
+        background-color: #c5cae9;
+        margin: 10px;
+
+        cursor: pointer;
+        -moz-osx-font-smoothing: grayscale;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        transition: transform 0.25s ease-out;
+    }
+    .dsmp-item p {
+        font-size: 22px;
+        text-decoration: none;
+        color: black;
+    }
+
+    .dsmp-item:hover {
+        transform: scale(1.02);
+      }

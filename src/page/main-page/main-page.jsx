@@ -38,10 +38,11 @@ class MainPage extends React.Component {
                     <Iac />
                 </div>
                 <div className='grid-item'>
+                <Scroll>
                     <SearchBox 
                     placeholder={'Введіть назву району'} 
                     handleChange={this.handleChange} />
-                    <Scroll>
+                   
                         <DistrictsList districts={filterDistricts}  /> 
                     </Scroll> 
                 </div>

@@ -1,32 +1,52 @@
 export const districts = [
   {
     id: 1,
-    name: 'test1',
+    name: 'Барський',
     webSite: 'www.test1'
   },
   {
     id: 2,
-    name: 'test2',
+    name: 'Бершадський',
     webSite: 'www.test2'
   },
   {
     id: 3,
-    name: 'Bar',
+    name: 'Вінницький',
     webSite: 'www.test2'
   },
   {
     id: 4,
-    name: 'Бар',
+    name: 'Гайсинський',
     webSite: 'www.test2'
   },
   {
     id: 5,
-    name: 'Ямпіль',
+    name: 'Жмеринський',
     webSite: 'www.test2'
   },
   {
     id: 6,
-    name: 'укукук укукук',
+    name: 'Іллінецький',
+    webSite: 'www.test2'
+  },
+  {
+    id: 1,
+    name: 'Калинівський',
+    webSite: 'www.test1'
+  },
+  {
+    id: 2,
+    name: 'Козятинський',
+    webSite: 'www.test2'
+  },
+  {
+    id: 3,
+    name: 'Крижопільський',
+    webSite: 'www.test2'
+  },
+  {
+    id: 4,
+    name: 'Липовецький',
     webSite: 'www.test2'
   }
 ];

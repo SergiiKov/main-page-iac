@@ -1,14 +1,15 @@
 .header {
-    height: 70px;
+    height: 80px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 25px;
+    background-color: black;
   
     .logo-container {
       height: 100%;
-      width: 70px;
-      // padding: 25px;
+      width: 60px;
+      padding: 10px;
     }
   
     .options {
@@ -20,6 +21,26 @@
   
       .option {
         padding: 10px 15px;
+        
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+      .option:last-child{
+        padding-right: 40px;
+      }
+
+      .option a {
+        color: white;
+        text-decoration: none;
+      }
+      .option a:hover {
+        color: #c5cae9 ;
+        text-decoration: none;
+      }
+      .option p:hover {
+        color: #c5cae9 ;
+        text-decoration: none;
       }
     }
   }

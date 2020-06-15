@@ -1,16 +1,16 @@
 import React from 'react';
-import dsmpPhoto from '../../img/graphs-job-laptop-papers-590016.jpg';
+import dsmpPhoto from '../../img/dsmp.png';
 import './dsmp.component.styles.scss'
 
 const Dsmp = () =>{
     return(
-        <div>
-            <p>dsmp</p>
+        <div className='dsmp-item'>
+            <p>Соціальна та молодіжна політика на Вінниччині</p>
             <a  className="App-link"
-            href="https://reactjs.org"
+            href="http://smp.vin.ua/joomla/"
             target="_blank"
             rel="noopener noreferrer"> 
-                <img src={dsmpPhoto} alt='dsmp' />
+                <img className='img-main-page' src={dsmpPhoto} alt='dsmp' />
             </a>   
         </div>
     )

@@ -9,8 +9,20 @@ const Header = () => (
       <Logo className='logo' />
     </Link>
     <div className='options'>
+  <div className='option' >
+  <a href="http://smp.vin.ua/joomla/"
+            target="_blank"
+            rel="noopener noreferrer">Соціальна та молодіжна політика на Вінниччині</a>
+  </div>
+  <div className='option'>
+  <a href="http://smp.vin.ua/wordpress/"
+            target="_blank"
+            rel="noopener noreferrer">ОКО IAЦ</a>   
+  </div>
+        
+    
       <Link className='option' to='/signin'>
-        Contact 
+        <p>Контакти</p> 
       </Link>
     </div>
   </div>
