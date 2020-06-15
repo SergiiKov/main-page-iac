@@ -7,8 +7,8 @@ const DistrictsCard = (props) =>{
     return(
         <div className='card-container'>
             <img src={require(`../../img/${id}.jpg`)} alt='district card' />
-            <h2>{name}</h2>
-            <p>{webSite}</p>
+            <h2>{'Район: ' + name}</h2>
+            <p>{'Веб сайт: ' + webSite}</p>
         </div>
     )
 };

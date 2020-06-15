@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg>
+  <g
+     style="display:inline"
+     id="layer2">
+    <rect
+       y="10.583333"
+       x="5.2916665"
+       height="68.791664"
+       width="190.5"
+       id="rect69"
+       style="fill:#ffff00;stroke-width:0.264583" />
+  </g>
+  <g
+     id="layer4">
+    <rect
+       y="79.375"
+       x="5.2916665"
+       height="5.2916665"
+       width="190.5"
+       id="rect90"
+       style="fill:#008080;stroke-width:0.264583" />
+  </g>
+  <g
+     style="display:inline"
+     id="layer3">
+    <text
+       transform="scale(0.80225178,1.2464915)"
+       id="text80"
+       y="50.603065"
+       x="9.7015285"
+       style="font-size:51.0974px;line-height:1.25;font-family:'Matura MT Script Capitals';-inkscape-font-specification:'Matura MT Script Capitals';stroke-width:1.27744"
+       xml:space="preserve"><tspan
+         style="stroke-width:1.27744"
+         y="50.603065"
+         x="9.7015285"
+         id="tspan78">ОКО ІАЦ</tspan></text>
+  </g>
+</svg>

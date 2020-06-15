@@ -1,12 +1,17 @@
 import React from 'react';
-import dsmpPhoto from '../../img/1.jpg';
+import dsmpPhoto from '../../img/graphs-job-laptop-papers-590016.jpg';
 import './dsmp.component.styles.scss'
 
 const Dsmp = () =>{
     return(
         <div>
             <p>dsmp</p>
-           <img src={dsmpPhoto} alt='dsmp' />
+            <a  className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"> 
+                <img src={dsmpPhoto} alt='dsmp' />
+            </a>   
         </div>
     )
 };
