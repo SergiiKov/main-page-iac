@@ -2,12 +2,10 @@ import React from 'react';
 import Iac from '../../components/iac/iac.component';
 import Dsmp from '../../components/dsmp/dsmp.component';
 import DistrictsList from '../../components/districts-list/districts-list.component';
-import Header from '../../components/header/header.component';
 import  SearchBox from '../../components/serch-box/serch-box.component';
 import Scroll from '../../components/scroll/scroll.component';
 import { districts } from '../../components/districts';
-import { Switch, Route } from 'react-router-dom';
-import SignIn from '../contact/contact-page';
+
 import './main-page.styles.scss'
 
 class MainPage extends React.Component {
@@ -31,11 +29,8 @@ class MainPage extends React.Component {
         return(
             <div>
                 <div>
-                    <Header />
-                    <Switch>
-        <Route exact path='/' component={MainPage} />
-        <Route path='/signin' component={SignIn} />
-      </Switch>
+                    {/* <Header /> */}
+                   
                 </div>
             <div className='grid-container'>
                 <div className='grid-item'>
