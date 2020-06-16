@@ -22,7 +22,7 @@ const Header = () => (
         
     
       <Link className='option' to='/signin'>
-        <p>Контакти</p> 
+        {/* <p>Контакти</p>  */}
       </Link>
     </div>
   </div>
