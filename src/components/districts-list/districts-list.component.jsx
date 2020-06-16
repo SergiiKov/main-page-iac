@@ -14,7 +14,9 @@ const DistrictsList = ({ districts }) => {
             key={i} 
             id={districts[i].id}  
             name={districts[i].name} 
-            webSite={districts[i].webSite} />
+            webSite={districts[i].webSite}
+            href={districts[i].href}
+             />
           );
       })
        }

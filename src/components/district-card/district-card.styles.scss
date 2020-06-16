@@ -20,11 +20,17 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  .card-container p {
+  .card-container a {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin-top: 10px;
-    font-weight: 400;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+  }
+
+  .card-container a:hover {
+ color: #fff ;
   }
   
   .card-container:hover {
