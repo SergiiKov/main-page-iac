@@ -16,11 +16,14 @@
         transform: translateZ(0);
         transition: transform 0.25s ease-out;
     }
+    
     .dsmp-item p {
         // padding-top: 20px;
         font-size: 22px;
         text-decoration: none;
         color: black;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
     }
 
     .dsmp-item:hover {

@@ -11,19 +11,20 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
-
-   
   }
+  
   .card-container h2 {
     margin-top: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
   }
 
   .card-container p {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     margin-top: 10px;
-    font-weight: 500;
+    font-weight: 400;
   }
   
   .card-container:hover {
