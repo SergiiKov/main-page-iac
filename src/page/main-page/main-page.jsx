@@ -28,10 +28,6 @@ class MainPage extends React.Component {
         district.name.toLowerCase().includes(searchField.toLowerCase()))
         return(
             <div>
-                <div>
-                    {/* <Header /> */}
-                   
-                </div>
             <div className='grid-container'>
                 <div className='grid-item'>
                     <Dsmp />
@@ -42,7 +38,6 @@ class MainPage extends React.Component {
                     <SearchBox 
                     placeholder={'Введіть назву району'} 
                     handleChange={this.handleChange} />
-                   
                         <DistrictsList districts={filterDistricts}  /> 
                     </Scroll> 
                 </div>

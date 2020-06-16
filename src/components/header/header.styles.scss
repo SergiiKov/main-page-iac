@@ -48,3 +48,12 @@
     }
   }
   
+  @media (max-width: 767px) {
+  
+    .header .options .option a {
+      font-size: 10px;
+    }
+    .header .options .option:last-child{
+      padding-right: 2px;
+    }
+  }

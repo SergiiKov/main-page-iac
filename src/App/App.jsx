@@ -7,11 +7,12 @@ import { Switch, Route } from 'react-router-dom';
 const App = () => {  
     return(
         <div>
-        <Header />
-        <Switch>
+          <Header />
+          <MainPage />
+        {/* <Switch>
           <Route exact path='/' component={MainPage} />
           <Route path='/signin' component={SignIn} />
-        </Switch>
+        </Switch> */}
       </div>
         );
     };

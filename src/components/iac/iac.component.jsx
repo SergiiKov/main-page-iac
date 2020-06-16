@@ -5,9 +5,7 @@ import './iac.component.styles.scss'
 const Iac = () =>{
     return(
         <div className='iac-item'>
-            <p>
-            OКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населення
-            </p>
+            <p>OКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населення</p>
            <div className='background-image'>
            <a  className="App-link"
             href="http://smp.vin.ua/wordpress/"
