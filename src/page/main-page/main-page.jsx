@@ -29,14 +29,14 @@ class MainPage extends React.Component {
         return(
             <div>
             <div className='grid-container'>
-                <div className='grid-item'>
+                <div className='grid-item left'>
                     <Dsmp />
                     <Iac />
                 </div>
-                <div className='grid-item'>
+                <div className='grid-item right'>
                 <Scroll>
                     <SearchBox 
-                    placeholder={'Введіть назву району'} 
+                    placeholder={'Введіть назву закладу'} 
                     handleChange={this.handleChange} />
                         <DistrictsList districts={filterDistricts}  /> 
                     </Scroll> 
