@@ -1,14 +1,15 @@
 .header {
-    height: 80px;
+    height: 60px;
     width: 100%;
     display: flex;
     justify-content: space-between;
-    // margin-bottom: 25px;
+    // margin-bottom: 20px;
     background-color: #4285F4;
+   
   
     .logo-container {
-      height: 100%;
-      width: 60px;
+       height: 100%;
+       width: auto;
       padding: 10px;
     }
   
@@ -23,22 +24,25 @@
         padding: 10px 15px;
         color: #ccc;
         text-decoration: none;
-        font-size: 16px;
+        font-size: 1em;
+       
+        a{
+          color: white;
+          padding: 6px 15px 6px 15px;
+          border: 1px dotted white;
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+        }
+
+         a:hover {
+          color: #4285F4 ;
+          background: white;
+        }
       }
 
       .option:last-child{
         padding-right: 40px;
-      }
-
-      .option a {
-        color: #fff;
-        text-decoration: none;
-        font-family: 'Montserrat', sans-serif;
-      }
-      
-      .option a:hover {
-        color: #111 ;
-        text-decoration: none;
       }
 
       .option p:hover {
@@ -53,7 +57,7 @@
     .header .options .option a {
       font-size: 10px;
     }
-    .header .options .option:last-child{
+    .header .options .option a:last-child{
       padding-right: 2px;
     }
   }
