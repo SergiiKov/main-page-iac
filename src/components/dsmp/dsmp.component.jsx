@@ -4,15 +4,17 @@ import './dsmp.component.styles.scss'
 
 const Dsmp = () =>{
     return(
-        <div className='dsmp-item'>
-            <p>Соціальна та молодіжна політика на Вінниччині</p>
-            <a  className="App-link"
-            href="http://smp.vin.ua/joomla/"
-            target="_blank"
-            rel="noopener noreferrer"> 
-                <img className='img-main-page' src={dsmpPhoto} alt='dsmp' />
-            </a>   
-        </div>
+        <div>
+            <a className="App-link"
+                href="http://smp.vin.ua/joomla/"
+                target="_blank"
+                rel="noopener noreferrer"> 
+                    <div className='dsmp-item'>
+                        <p>Соціальна та молодіжна політика на Вінниччині</p>
+                        <img className='img-main-page' src={dsmpPhoto} alt='dsmp' />
+                    </div>
+            </a>  
+        </div>    
     )
 };
 
