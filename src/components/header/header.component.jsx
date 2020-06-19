@@ -12,13 +12,13 @@ const Header = () => (
       <div className='option' >
         <a href="http://smp.vin.ua/joomla/"
           target="_blank"
-          rel="noopener noreferrer">Соціальна та молодіжна політика на Вінниччині
+          rel="noopener noreferrer">СМП
         </a>
       </div>
       <div className='option'>
         <a href="http://smp.vin.ua/wordpress/"
           target="_blank"
-          rel="noopener noreferrer">ОКО IAЦ
+          rel="noopener noreferrer">IAЦ
         </a>   
       </div>
     </div>
