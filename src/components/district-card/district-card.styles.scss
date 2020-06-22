@@ -1,11 +1,12 @@
 a {
   text-decoration: none;
 }
+
 .card-container {
     display: flex;
     flex-direction: column;
     background-color: #448aff;
-    border: 1px solid #0d47a1 ;
+    border: 2px solid #0d47a1;
     border-radius: 5px;
     padding: 10px;
     margin: 10px;
@@ -14,6 +15,10 @@ a {
     backface-visibility: hidden;
     transform: translateZ(0);
     transition: transform 0.25s ease-out;
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
   }
   
   .card-container h2 {

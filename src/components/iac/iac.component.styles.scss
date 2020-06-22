@@ -7,9 +7,14 @@
     }
 
 .iac-item{
-    background-color: #448aff;
+    // background-color: #448aff;
+    background-color:rgba(96, 125, 139, 0.3);
     border: 1px solid #0d47a1 ;
     margin: 10px;
+
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
 
     cursor: pointer;
     -moz-osx-font-smoothing: grayscale;
