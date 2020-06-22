@@ -5,12 +5,13 @@
     justify-content: space-between;
     // background-color:#4285F4;
     background: rgb(66,133,244);
-background: linear-gradient(143deg, rgba(66,133,244,1) 0%, rgba(66,133,244,1) 0%, rgba(13,71,161,1) 100%);
+    background: linear-gradient(143deg, rgba(66,133,244,1) 0%, rgba(66,133,244,1) 0%, rgba(13,71,161,1) 100%);
 
     .logo-container {
        height: 100%;
        width: auto;
       padding: 10px;
+      padding-left: 10px;
     }
   
     .options {
