@@ -13,6 +13,8 @@ import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import { fade, makeStyles } from '@material-ui/core/styles';
 
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 import logo from '../../img/logo.svg';
 
@@ -32,10 +34,23 @@ function ElevationScroll(props) {
   const useStyles = makeStyles(theme => ({
     ToolbarMargin: {
       ...theme.mixins.toolbar,
-      marginBottom: '3em'
+      marginBottom: '3em',
+      [theme.breakpoints.down('md')]:{
+        marginBottom: '2em'
+      },
+      [theme.breakpoints.down('xs')]:{
+        marginBottom: '1.25em'
+      }
     },
     logo: {
-      height: "8em"
+      height: "8em",
+      [theme.breakpoints.down('md')]:{
+        height: "7em" 
+      },
+      [theme.breakpoints.down('xs')]:{
+        height: "5em" 
+      }
+
     },
     logoContainer:{
       padding:0,
@@ -110,27 +125,19 @@ function ElevationScroll(props) {
 export default function Header (props) {
     const classes = useStyles();
     const [value, setValue] = useState(0);
-    
-
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down('md'));
     const handleChange = (e, value) => {
         setValue(value)
       };
 
-    return(
+    const tabs = (
         <React.Fragment>
-            <ElevationScroll>
-                <AppBar>
-               
-                    <Toolbar>
-                        <Button  className={classes.logoContainer}  disableRipple>
-                            <img src={logo} alt='company logo' className={classes.logo} />
-                        </Button> 
-                  
-                    <Tabs value={value} onChange={handleChange}  className={classes.tabContainer}>
+              <Tabs value={value} onChange={handleChange}  className={classes.tabContainer}>
                                 <Tab className={classes.tab} href="http://smp.vin.ua/joomla/" target="_blank" rel="noopener noreferrer"  label='IAC' />
                                 <Tab className={classes.tab} href="http://smp.vin.ua/wordpress/" target="_blank" rel="noopener noreferrer"  label='DSMP' />
                     </Tabs> 
-                        <div className={classes.search}>
+                    <div className={classes.search}>
                             <div className={classes.searchIcon}>
                             <SearchIcon />
                             </div>
@@ -143,6 +150,19 @@ export default function Header (props) {
                                 inputProps={{ 'aria-label': 'search' }}
                                 />
                         </div>
+        </React.Fragment>
+    )
+
+    return(
+        <React.Fragment>
+            <ElevationScroll>
+                <AppBar>
+               
+                    <Toolbar>
+                        <Button  className={classes.logoContainer}  disableRipple>
+                            <img src={logo} alt='company logo' className={classes.logo} />
+                        </Button> 
+                        {matches ? null : tabs}
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
