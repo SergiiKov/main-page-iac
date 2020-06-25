@@ -16,6 +16,10 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import MenuIcon from '@material-ui/icons/Menu';
+import IconButton from '@material-ui/core/IconButton';
+
 import logo from '../../img/logo.svg';
 
 
@@ -119,11 +123,23 @@ function ElevationScroll(props) {
         [theme.breakpoints.up('md')]: {
           width: '20ch',
         },
+      },
+      drawerIconContainer: {
+marginLeft: 'auto',
+          '&hover': {
+        backgroundColor:'transparent'
       }
+    },
+    drawerIcon: {
+        height: '50px',
+        width: '50px'
+    }
   }))
   
 export default function Header (props) {
     const classes = useStyles();
+    const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
+    const [openDrawer, setOpenDrawer] = useState(false);
     const [value, setValue] = useState(0);
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('md'));
@@ -153,6 +169,23 @@ export default function Header (props) {
         </React.Fragment>
     )
 
+    const drawer = (
+        <React.Fragment>
+            <SwipeableDrawer 
+                disableBackdropTransition={!iOS} 
+                disableDiscovery={iOS} 
+                open={openDrawer} 
+                onClose={()=>setOpenDrawer(false)}
+                onOpen={()=>setOpenDrawer(true)}
+            > 
+            test
+            </SwipeableDrawer> 
+            <IconButton className={classes.drawerIconContainer} onClick={()=>setOpenDrawer(!openDrawer)} disableRipple>
+                <MenuIcon className={classes.drawerIcon} />
+            </IconButton>
+        </React.Fragment>
+    )
+
     return(
         <React.Fragment>
             <ElevationScroll>
@@ -162,7 +195,7 @@ export default function Header (props) {
                         <Button  className={classes.logoContainer}  disableRipple>
                             <img src={logo} alt='company logo' className={classes.logo} />
                         </Button> 
-                        {matches ? null : tabs}
+                        {matches ? drawer : tabs}
                     </Toolbar>
                 </AppBar>
             </ElevationScroll>
