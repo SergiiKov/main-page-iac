@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+
 import { useState, useEffect } from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -9,11 +9,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Button from '@material-ui/core/Button';
 
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
 import InputBase from '@material-ui/core/InputBase';
 import SearchIcon from '@material-ui/icons/Search';
 import { fade, makeStyles } from '@material-ui/core/styles';
+
 
 import logo from '../../img/logo.svg';
 
@@ -108,11 +107,14 @@ function ElevationScroll(props) {
       }
   }))
   
-
-
 export default function Header (props) {
     const classes = useStyles();
     const [value, setValue] = useState(0);
+    
+
+    const handleChange = (e, value) => {
+        setValue(value)
+      };
 
     return(
         <React.Fragment>
@@ -120,32 +122,28 @@ export default function Header (props) {
                 <AppBar>
                
                     <Toolbar>
-                    <Button  className={classes.logoContainer}  disableRipple>
-                    <img src={logo} alt='company logo' className={classes.logo} />
-                  </Button> 
+                        <Button  className={classes.logoContainer}  disableRipple>
+                            <img src={logo} alt='company logo' className={classes.logo} />
+                        </Button> 
                   
-                  <Tabs value={0} className={classes.tabContainer}>
-                            < Tab className={classes.tab}  label='IAC' />
-                            <Tab className={classes.tab}  label='DSMP' />
-                        </Tabs> 
-                  
-                  <div className={classes.search}>
-            <div className={classes.searchIcon}>
-              <SearchIcon />
-            </div>
-            <InputBase
-              placeholder="Search…"
-              classes={{
-                root: classes.inputRoot,
-                input: classes.inputInput,
-              }}
-              inputProps={{ 'aria-label': 'search' }}
-            />
-          </div>
-
-                    
+                    <Tabs value={value} onChange={handleChange}  className={classes.tabContainer}>
+                                <Tab className={classes.tab} href="http://smp.vin.ua/joomla/" target="_blank" rel="noopener noreferrer"  label='IAC' />
+                                <Tab className={classes.tab} href="http://smp.vin.ua/wordpress/" target="_blank" rel="noopener noreferrer"  label='DSMP' />
+                    </Tabs> 
+                        <div className={classes.search}>
+                            <div className={classes.searchIcon}>
+                            <SearchIcon />
+                            </div>
+                                <InputBase
+                                placeholder="Search…"
+                                classes={{
+                                    root: classes.inputRoot,
+                                    input: classes.inputInput,
+                                }}
+                                inputProps={{ 'aria-label': 'search' }}
+                                />
+                        </div>
                     </Toolbar>
-        
                 </AppBar>
             </ElevationScroll>
             <div className={classes.ToolbarMargin} />
