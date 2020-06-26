@@ -137,6 +137,16 @@ marginLeft: 'auto',
     drawerIcon: {
         height: '50px',
         width: '50px'
+    },
+    drawer: {
+      backgroundColor: "#0B72B9"
+    },
+    drawerItem: {
+      ...theme.typography.tab,
+      color: 'white'
+    },
+    appBar:{
+      zIndex: theme.zIndex.modal + 1
     }
   }))
   
@@ -181,14 +191,16 @@ export default function Header (props) {
                 open={openDrawer} 
                 onClose={()=>setOpenDrawer(false)}
                 onOpen={()=>setOpenDrawer(true)}
+                classes={{paper: classes.drawer}}
             > 
             <List disablePadding>
+            <div className={classes.ToolbarMargin} />
                 <ListItem divider button onClick={()=>setOpenDrawer(false)} >
-                    <ListItemText href="http://smp.vin.ua/joomla/" target="_blank" rel="noopener noreferrer">
+                    <ListItemText className={classes.drawerItem} href="http://smp.vin.ua/joomla/" target="_blank" rel="noopener noreferrer">
                     IAC
                     </ListItemText>
                     </ListItem>
-                <ListItem divider button href="http://smp.vin.ua/wordpress/" onClick={()=>setOpenDrawer(false)}>DSMP</ListItem>
+                <ListItem className={classes.drawerItem} divider button href="http://smp.vin.ua/wordpress/" onClick={()=>setOpenDrawer(false)}>DSMP</ListItem>
             </List>
             </SwipeableDrawer> 
             <IconButton className={classes.drawerIconContainer} onClick={()=>setOpenDrawer(!openDrawer)} disableRipple>
@@ -200,9 +212,8 @@ export default function Header (props) {
     return(
         <React.Fragment>
             <ElevationScroll>
-                <AppBar>
-               
-                    <Toolbar>
+                <AppBar position='fixed' className={classes.appBar} >
+                    <Toolbar disableGutters>
                         <Button  className={classes.logoContainer}  disableRipple>
                             <img src={logo} alt='company logo' className={classes.logo} />
                         </Button> 
