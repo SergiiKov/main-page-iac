@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -74,9 +74,11 @@ function ElevationScroll(props) {
       minWidth:10,
       marginLeft:'25px',
       paddingLeft: '20px',
-      paddingRight: '20px'
-      
-
+      paddingRight: '20px',
+      color: 'white',
+      '&:hover': {
+        opacity: 0.9
+      }
     },
     button: {
       borderRadius: '50px',
@@ -158,32 +160,30 @@ export default function Header (props) {
     const classes = useStyles();
     const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
     const [openDrawer, setOpenDrawer] = useState(false);
-    const [value, setValue] = useState(0);
+    
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('md'));
-    const handleChange = (e, value) => {
-        setValue(value)
-      };
+    
 
     const tabs = (
         <React.Fragment>
-              <Tabs value={value} onChange={handleChange}  className={classes.tabContainer}>
+              <Tabs className={classes.tabContainer}>
                                 <Tab className={classes.tab} href="http://smp.vin.ua/joomla/" label='СМП' />
                                 <Tab className={classes.tab} href="http://smp.vin.ua/wordpress/"  label='ІАЦ' />
                     </Tabs> 
-                    <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                            <SearchIcon />
-                            </div>
-                                <InputBase
-                                placeholder="Search…"
-                                classes={{
-                                    root: classes.inputRoot,
-                                    input: classes.inputInput,
-                                }}
-                                inputProps={{ 'aria-label': 'search' }}
-                                />
-                        </div>
+                      <div className={classes.search}>
+                              <div className={classes.searchIcon}>
+                              <SearchIcon />
+                              </div>
+                                  <InputBase
+                                  placeholder="Search…"
+                                  classes={{
+                                      root: classes.inputRoot,
+                                      input: classes.inputInput,
+                                  }}
+                                  inputProps={{ 'aria-label': 'search' }}
+                                  />
+                      </div>
         </React.Fragment>
     )
 
@@ -227,7 +227,5 @@ export default function Header (props) {
             </ElevationScroll>
             <div className={classes.ToolbarMargin} />
         </React.Fragment>
-       
-    
     )
 }

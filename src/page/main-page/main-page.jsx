@@ -40,6 +40,7 @@ class MainPage extends React.Component {
                     handleChange={this.handleChange} />
                         <DistrictsList districts={filterDistricts}  /> 
                     </Scroll> 
+                    
                 </div>
             </div> 
         </div>
