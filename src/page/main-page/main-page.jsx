@@ -27,7 +27,7 @@ class MainPage extends React.Component {
         const filterDistricts = this.state.districts.filter(district => 
         district.name.toLowerCase().includes(searchField.toLowerCase()))
         return(
-            <div>
+            <div >
             <div className='grid-container'>
                 <div className='grid-item left'>
                     <Dsmp />

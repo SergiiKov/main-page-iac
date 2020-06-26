@@ -2,11 +2,18 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import theme from './theme';
 import { useTheme } from '@material-ui/core/styles';
+import FooterAdornment from '../../img/Footer Adornment.svg';
 
 const useStyles = makeStyles(theme=>({
     footer: {
         backgroundColor: theme.palette.common.blue,
-        width: '100%'
+        width: '100%',
+        zIndex: theme.zIndex.modal + 1,
+        position: 'relative'
+    },
+    footerAdornment:{
+        width: '5em',
+        verticalAlignment: 'bottom'
     }
 }))
 
@@ -15,10 +22,11 @@ export default function Footer() {
 
     return(
         <footer className={classes.footer}>
-              <div>
+             <img src={FooterAdornment} alt='company logo' className={classes.footerAdornment} />
+              {/* <div>
                 <a href='http://smp.vin.ua/wordpress/'>ОКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населення</a>
                 <p>2020 рік</p>
-                </div>
+                </div> */}
                
                 {/* <div className='adres-block'>
                 <p>Адреса: 21100 м. Вінниця, вул. Хмельницьке шосе 15</p>
