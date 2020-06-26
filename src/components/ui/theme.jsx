@@ -1,7 +1,8 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
-const arcBlue = "#0B72B9";
+// const arcBlue = "#0B72B9";
+const arcBlue = "#3f51b5";
 const arcOrange = "#FFBA60";
 
 

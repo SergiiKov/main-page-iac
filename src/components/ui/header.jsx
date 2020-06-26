@@ -24,7 +24,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import logo from '../../img/logo11.svg';
+import logo from '../../img/logo4.svg';
 
 
 function ElevationScroll(props) {
@@ -42,7 +42,7 @@ function ElevationScroll(props) {
   const useStyles = makeStyles(theme => ({
     ToolbarMargin: {
       ...theme.mixins.toolbar,
-      marginBottom: '3em',
+      marginBottom: '1em',
       [theme.breakpoints.down('md')]:{
         marginBottom: '2em'
       },
@@ -51,9 +51,9 @@ function ElevationScroll(props) {
       }
     },
     logo: {
-      height: "8em",
+      height: "6em",
       [theme.breakpoints.down('md')]:{
-        height: "7em" 
+        height: "6em" 
       },
       [theme.breakpoints.down('xs')]:{
         height: "5em" 
@@ -72,7 +72,11 @@ function ElevationScroll(props) {
     tab: {
       ...theme.typography.tab,
       minWidth:10,
-      marginLeft:'25px'
+      marginLeft:'25px',
+      paddingLeft: '20px',
+      paddingRight: '20px'
+      
+
     },
     button: {
       borderRadius: '50px',
@@ -98,7 +102,7 @@ function ElevationScroll(props) {
         '&:hover': {
           backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        marginRight: theme.spacing(2),
+        marginRight: theme.spacing(6),
         marginLeft: 0,
         width: '100%',
         [theme.breakpoints.up('sm')]: {
@@ -164,8 +168,8 @@ export default function Header (props) {
     const tabs = (
         <React.Fragment>
               <Tabs value={value} onChange={handleChange}  className={classes.tabContainer}>
-                                <Tab className={classes.tab} href="http://smp.vin.ua/joomla/" target="_blank" rel="noopener noreferrer"  label='IAC' />
-                                <Tab className={classes.tab} href="http://smp.vin.ua/wordpress/" target="_blank" rel="noopener noreferrer"  label='DSMP' />
+                                <Tab className={classes.tab} href="http://smp.vin.ua/joomla/" label='СМП' />
+                                <Tab className={classes.tab} href="http://smp.vin.ua/wordpress/"  label='ІАЦ' />
                     </Tabs> 
                     <div className={classes.search}>
                             <div className={classes.searchIcon}>
