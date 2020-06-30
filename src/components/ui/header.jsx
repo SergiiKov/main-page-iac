@@ -130,7 +130,7 @@ function ElevationScroll(props) {
         transition: theme.transitions.create('width'),
         width: '100%',
         [theme.breakpoints.up('md')]: {
-          width: '20ch',
+          width: '22ch',
         },
       },
       drawerIconContainer: {
@@ -155,7 +155,7 @@ marginLeft: 'auto',
     }
   }))
   
-export default function Header (props) {
+export default function Header ({props,placeholder, handleChange}) {
     const classes = useStyles();
     const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
     const [openDrawer, setOpenDrawer] = useState(false);
@@ -175,7 +175,9 @@ export default function Header (props) {
                               <SearchIcon />
                               </div>
                                   <InputBase
-                                  placeholder="Пошук закладу"
+                                  type='search' 
+                                  placeholder={placeholder}
+                                  onChange={handleChange}
                                   classes={{
                                       root: classes.inputRoot,
                                       input: classes.inputInput,
