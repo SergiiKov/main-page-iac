@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import FooterAdornment from '../../img/footer3.svg';
+import FooterAdornment from '../../img/footer44.svg';
 
 const useStyles = makeStyles(theme=>({
     footer: {
@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme=>({
         position: 'relative'
     },
     footerAdornment:{
-        width: '25em',
+        width: '24em',
         verticalAlignment: 'bottom'
     },
     mainContainer: {

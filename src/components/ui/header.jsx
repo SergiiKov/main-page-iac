@@ -145,7 +145,7 @@ marginLeft: 'auto',
         width: '50px'
     },
     drawer: {
-      backgroundColor: "#0B72B9"
+      backgroundColor: theme.palette.common.blue
     },
     drawerItem: {
       ...theme.typography.tab,
@@ -176,7 +176,7 @@ export default function Header (props) {
                               <SearchIcon />
                               </div>
                                   <InputBase
-                                  placeholder="Search…"
+                                  placeholder="Пошук закладу"
                                   classes={{
                                       root: classes.inputRoot,
                                       input: classes.inputInput,
@@ -197,15 +197,21 @@ export default function Header (props) {
                 onOpen={()=>setOpenDrawer(true)}
                 classes={{paper: classes.drawer}}
             > 
+       
             <List disablePadding>
             <div className={classes.ToolbarMargin} />
                 <ListItem divider button onClick={()=>setOpenDrawer(false)} >
-                    <ListItemText className={classes.drawerItem} href="http://smp.vin.ua/joomla/" target="_blank" rel="noopener noreferrer">
-                    IAC
+                    <ListItemText className={classes.drawerItem}>
+                    Меню
                     </ListItemText>
                     </ListItem>
-                <ListItem className={classes.drawerItem} divider button href="http://smp.vin.ua/wordpress/" onClick={()=>setOpenDrawer(false)}>DSMP</ListItem>
             </List>
+            <Button variant="contained" color="primary" href="http://smp.vin.ua/joomla/">
+            СМП
+            </Button>
+            <Button variant="contained" color="primary" href="http://smp.vin.ua/wordpress/">
+            ІАЦ
+          </Button>
             </SwipeableDrawer> 
             <IconButton className={classes.drawerIconContainer} onClick={()=>setOpenDrawer(!openDrawer)} disableRipple>
                 <MenuIcon className={classes.drawerIcon} />
