@@ -26,7 +26,6 @@ import ListItemText from '@material-ui/core/ListItemText';
 
 import logo from '../../img/logo4.svg';
 
-
 function ElevationScroll(props) {
     const { children } = props;
     const trigger = useScrollTrigger({

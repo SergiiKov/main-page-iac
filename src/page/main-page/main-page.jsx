@@ -1,12 +1,13 @@
 import React from 'react';
-import Iac from '../../components/iac/iac.component';
-import Dsmp from '../../components/dsmp/dsmp.component';
+// import Iac from '../../components/iac/iac.component';
+// import Dsmp from '../../components/dsmp/dsmp.component';
 import DistrictsList from '../../components/districts-list/districts-list.component';
 import  SearchBox from '../../components/serch-box/serch-box.component';
 import Scroll from '../../components/scroll/scroll.component';
 import { districts } from '../../components/districts';
 
 import MediaCardIac from '../../components/ui/card-iac';
+import MediaCardSmp from '../../components/ui/card-smp';
 
 import './main-page.styles.scss'
 
@@ -32,12 +33,11 @@ class MainPage extends React.Component {
             <div >
             <div className='grid-container'>
                 <div className='grid-item left'>
-                   
                     {/* <Dsmp /> */}
+                    {/* <Iac /> */}
 
+                    <MediaCardSmp />
                     <MediaCardIac />
-
-                    <Iac />
                 </div>
                 <div className='grid-item right'>
                 <Scroll>

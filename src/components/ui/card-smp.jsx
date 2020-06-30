@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import dsmpPhoto from '../../img/iac.png';
+import dsmpPhoto from '../../img/dsmp.png';
 
 const useStyles = makeStyles({
   root: {
@@ -25,12 +25,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function MediaCardIac() {
+export default function MediaCardSmp() {
   const classes = useStyles();
 
   return (
     <Card className={classes.root}>
-      <CardActionArea  href="http://smp.vin.ua/wordpress/">
+      <CardActionArea  href="http://smp.vin.ua/joomla/">
         <CardMedia
           className={classes.media}
           image={dsmpPhoto}
@@ -38,12 +38,12 @@ export default function MediaCardIac() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-          OКО Інформаційно-аналітичний центр з обслуговування установ соціального захисту населення
+          Соціальна та молодіжна політика на Вінниччині
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href="http://smp.vin.ua/wordpress/"
+        <Button size="small" color="primary" href="http://smp.vin.ua/joomla/"
                 target="_blank"
                 rel="noopener noreferrer">
           Дізнатись більше
