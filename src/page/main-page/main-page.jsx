@@ -6,6 +6,8 @@ import  SearchBox from '../../components/serch-box/serch-box.component';
 import Scroll from '../../components/scroll/scroll.component';
 import { districts } from '../../components/districts';
 
+import MediaCardIac from '../../components/ui/card-iac';
+
 import './main-page.styles.scss'
 
 class MainPage extends React.Component {
@@ -30,7 +32,11 @@ class MainPage extends React.Component {
             <div >
             <div className='grid-container'>
                 <div className='grid-item left'>
-                    <Dsmp />
+                   
+                    {/* <Dsmp /> */}
+
+                    <MediaCardIac />
+
                     <Iac />
                 </div>
                 <div className='grid-item right'>

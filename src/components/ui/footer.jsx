@@ -10,7 +10,9 @@ const useStyles = makeStyles(theme=>({
         backgroundColor: theme.palette.common.blue,
         width: '100%',
         zIndex: theme.zIndex.modal + 1,
-        position: 'relative'
+        position: 'relative',
+        flex: '0 0 auto'
+
     },
     footerAdornment:{
         width: '24em',
