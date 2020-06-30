@@ -1,26 +1,27 @@
 {
   "files": {
-    "main.css": "/main-page-iac/static/css/main.6f0b2dab.chunk.css",
-    "main.js": "/main-page-iac/static/js/main.7e54ce9f.chunk.js",
-    "main.js.map": "/main-page-iac/static/js/main.7e54ce9f.chunk.js.map",
+    "main.css": "/main-page-iac/static/css/main.565ae52d.chunk.css",
+    "main.js": "/main-page-iac/static/js/main.633331ff.chunk.js",
+    "main.js.map": "/main-page-iac/static/js/main.633331ff.chunk.js.map",
     "runtime-main.js": "/main-page-iac/static/js/runtime-main.2d5c1f83.js",
     "runtime-main.js.map": "/main-page-iac/static/js/runtime-main.2d5c1f83.js.map",
-    "static/js/2.d7cae149.chunk.js": "/main-page-iac/static/js/2.d7cae149.chunk.js",
-    "static/js/2.d7cae149.chunk.js.map": "/main-page-iac/static/js/2.d7cae149.chunk.js.map",
+    "static/js/2.0599a7d1.chunk.js": "/main-page-iac/static/js/2.0599a7d1.chunk.js",
+    "static/js/2.0599a7d1.chunk.js.map": "/main-page-iac/static/js/2.0599a7d1.chunk.js.map",
     "index.html": "/main-page-iac/index.html",
-    "precache-manifest.ecaf0b3f972ebb91e58e53807f396fc3.js": "/main-page-iac/precache-manifest.ecaf0b3f972ebb91e58e53807f396fc3.js",
+    "precache-manifest.6d93780e8134bca104af94430f50f525.js": "/main-page-iac/precache-manifest.6d93780e8134bca104af94430f50f525.js",
     "service-worker.js": "/main-page-iac/service-worker.js",
-    "static/css/main.6f0b2dab.chunk.css.map": "/main-page-iac/static/css/main.6f0b2dab.chunk.css.map",
-    "static/js/2.d7cae149.chunk.js.LICENSE.txt": "/main-page-iac/static/js/2.d7cae149.chunk.js.LICENSE.txt",
+    "static/css/main.565ae52d.chunk.css.map": "/main-page-iac/static/css/main.565ae52d.chunk.css.map",
+    "static/js/2.0599a7d1.chunk.js.LICENSE.txt": "/main-page-iac/static/js/2.0599a7d1.chunk.js.LICENSE.txt",
     "static/media/1.png": "/main-page-iac/static/media/1.3e8059b4.png",
-    "static/media/dsmp.png": "/main-page-iac/static/media/dsmp.443ebee7.png",
+    "static/media/dsmp.png": "/main-page-iac/static/media/dsmp.2eefc696.png",
+    "static/media/footer44.svg": "/main-page-iac/static/media/footer44.bfd07ef3.svg",
     "static/media/iac.png": "/main-page-iac/static/media/iac.69fb0778.png",
-    "static/media/logo.2fd96e6b.svg": "/main-page-iac/static/media/logo.2fd96e6b.svg"
+    "static/media/logo4.svg": "/main-page-iac/static/media/logo4.923a06a5.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2d5c1f83.js",
-    "static/js/2.d7cae149.chunk.js",
-    "static/css/main.6f0b2dab.chunk.css",
-    "static/js/main.7e54ce9f.chunk.js"
+    "static/js/2.0599a7d1.chunk.js",
+    "static/css/main.565ae52d.chunk.css",
+    "static/js/main.633331ff.chunk.js"
   ]
 }
