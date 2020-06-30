@@ -110,6 +110,11 @@ function ElevationScroll(props) {
           marginLeft: theme.spacing(3),
           width: 'auto',
         },
+        [theme.breakpoints.up('xs')]: {
+          marginLeft: theme.spacing(1),
+          marginRight: theme.spacing(1),
+          width: 'auto',
+        },
       },
       searchIcon: {
         padding: theme.spacing(0, 2),
@@ -134,7 +139,7 @@ function ElevationScroll(props) {
         },
       },
       drawerIconContainer: {
-marginLeft: 'auto',
+        marginLeft: 'auto',
           '&hover': {
         backgroundColor:'transparent'
       }
@@ -144,11 +149,14 @@ marginLeft: 'auto',
         width: '50px'
     },
     drawer: {
-      backgroundColor: theme.palette.common.blue
+      backgroundColor: theme.palette.common.blue,
+      padding: '20px'
     },
     drawerItem: {
       ...theme.typography.tab,
-      color: 'white'
+      color: 'white',
+      marginTop:'10px'
+
     },
     appBar:{
       zIndex: theme.zIndex.modal + 1
@@ -207,13 +215,28 @@ export default function Header ({props,placeholder, handleChange}) {
                     </ListItemText>
                     </ListItem>
             </List>
-            <Button variant="contained" color="primary" href="http://smp.vin.ua/joomla/">
+            <Button  variant="contained" color="secondary" href="http://smp.vin.ua/joomla/">
             СМП
             </Button>
             <Button variant="contained" color="primary" href="http://smp.vin.ua/wordpress/">
             ІАЦ
           </Button>
             </SwipeableDrawer> 
+            <div className={classes.search}>
+                              <div className={classes.searchIcon}>
+                              <SearchIcon />
+                              </div>
+                                  <InputBase
+                                  type='search' 
+                                  placeholder={placeholder}
+                                  onChange={handleChange}
+                                  classes={{
+                                      root: classes.inputRoot,
+                                      input: classes.inputInput,
+                                  }}
+                                  inputProps={{ 'aria-label': 'search' }}
+                                  />
+                      </div>
             <IconButton className={classes.drawerIconContainer} onClick={()=>setOpenDrawer(!openDrawer)} disableRipple>
                 <MenuIcon className={classes.drawerIcon} />
             </IconButton>
