@@ -7,8 +7,13 @@ import Header from '../components/ui/header';
 import Footer from '../components/ui/footer';
 import DistrictsList from '../components/districts-list/districts-list.component';
 import Scroll from '../components/scroll/scroll.component';
+
 import MediaCardIac from '../components/ui/card-iac';
 import MediaCardSmp from '../components/ui/card-smp';
+
+import Dsmp from '../components/dsmp/dsmp.component';
+import Iac from '../components/iac/iac.component';
+
 import Grid from '@material-ui/core/Grid';
 import { districts } from '../components/districts';
 import { styled } from '@material-ui/core/styles';
@@ -18,11 +23,11 @@ const GridStyles = styled(Grid)({
 });
 
 const GridStylesLeft = styled(Grid)({
-    backgroundColor:'#b0bec5',
+    backgroundColor:'#cfd8dc',
   });
 
   const GridStylesRight = styled(Grid)({
-    backgroundColor:'#b0bec5',
+    backgroundColor:'#cfd8dc',
     paddingTop: '20px'
   });
 
@@ -51,8 +56,10 @@ class App extends React.Component {
                     handleChange={this.handleChange}  />
                <GridStyles container>
                    <GridStylesLeft item xs={12} md={6} sm={12} >
-                        <MediaCardSmp />
-                        <MediaCardIac />
+                        {/* <MediaCardSmp />
+                        <MediaCardIac /> */}
+                        <Dsmp />
+                        <Iac />
                    </GridStylesLeft>
                    <GridStylesRight item xs={12} md={6} sm={12} >
                          <Scroll>

@@ -12,6 +12,7 @@ import dsmpPhoto from '../../img/iac.png';
 const useStyles = makeStyles({
   root: {
      maxWidth: '100%',
+    
      marginTop: '30px',
      margin: '10px',
      backgroundColor: '#e3f2fd'
@@ -21,7 +22,6 @@ const useStyles = makeStyles({
     height: 120,
     backgroundSize: 'cover',
     backgroundPosition: 'center'
-   
   },
 });
 

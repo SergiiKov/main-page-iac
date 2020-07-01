@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import FooterAdornment from '../../img/footer44.svg';
+import FooterAdornment from '../../img/footer444.svg';
 
 const useStyles = makeStyles(theme=>({
     footer: {

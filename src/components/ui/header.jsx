@@ -24,7 +24,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import logo from '../../img/logo4.svg';
+import logo from '../../img/logo45.svg';
 
 function ElevationScroll(props) {
     const { children } = props;
@@ -52,10 +52,10 @@ function ElevationScroll(props) {
     logo: {
       height: "6em",
       [theme.breakpoints.down('md')]:{
-        height: "6em" 
+        height: "5em" 
       },
       [theme.breakpoints.down('xs')]:{
-        height: "5em" 
+        height: "4em" 
       }
 
     },
@@ -103,13 +103,15 @@ function ElevationScroll(props) {
         '&:hover': {
           backgroundColor: fade(theme.palette.common.white, 0.25),
         },
-        marginRight: theme.spacing(6),
+        marginRight: theme.spacing(4),
         marginLeft: 0,
         width: '100%',
-        [theme.breakpoints.up('sm')]: {
-          marginLeft: theme.spacing(3),
+        [theme.breakpoints.up('md')]: {
+          marginLeft: theme.spacing(1),
+          marginRight: theme.spacing(4),
           width: 'auto',
         },
+        
         [theme.breakpoints.up('xs')]: {
           marginLeft: theme.spacing(1),
           marginRight: theme.spacing(4),
