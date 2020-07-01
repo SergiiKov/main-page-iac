@@ -11,8 +11,21 @@ import MediaCardIac from '../components/ui/card-iac';
 import MediaCardSmp from '../components/ui/card-smp';
 import Grid from '@material-ui/core/Grid';
 import { districts } from '../components/districts';
+import { styled } from '@material-ui/core/styles';
 
-import './app.styles.scss';
+const GridStyles = styled(Grid)({
+ 
+});
+
+const GridStylesLeft = styled(Grid)({
+    backgroundColor:'#b0bec5',
+  });
+
+  const GridStylesRight = styled(Grid)({
+    backgroundColor:'#b0bec5',
+    paddingTop: '20px'
+  });
+
 
 class App extends React.Component {
     constructor(){
@@ -36,18 +49,17 @@ class App extends React.Component {
             <ThemeProvider theme={theme}>
                     <Header  placeholder={'Введіть назву закладу'} 
                     handleChange={this.handleChange}  />
-               
-               <Grid container>
-                   <Grid item xs={12} md={6} sm={12} className='grid-item left' >
+               <GridStyles container>
+                   <GridStylesLeft item xs={12} md={6} sm={12} >
                         <MediaCardSmp />
                         <MediaCardIac />
-                   </Grid>
-                   <Grid item xs={12} md={6} sm={12} className='grid-item right' >
+                   </GridStylesLeft>
+                   <GridStylesRight item xs={12} md={6} sm={12} >
                          <Scroll>
                         <DistrictsList districts={filterDistricts} />
                         </Scroll> 
-                   </Grid>
-               </Grid>
+                   </GridStylesRight>
+               </GridStyles>
                     <Footer />
             </ThemeProvider>
         )

@@ -12,7 +12,7 @@ import dsmpPhoto from '../../img/dsmp.png';
 const useStyles = makeStyles({
   root: {
      maxWidth: '100%',
-     marginTop: '40px',
+     marginTop: '30px',
      margin: '10px',
      backgroundColor: '#e3f2fd'
     
@@ -37,7 +37,7 @@ export default function MediaCardSmp() {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h6" component="h2">
           Соціальна та молодіжна політика на Вінниччині
           </Typography>
         </CardContent>

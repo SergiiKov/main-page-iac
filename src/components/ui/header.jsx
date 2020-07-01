@@ -71,7 +71,7 @@ function ElevationScroll(props) {
     tab: {
       ...theme.typography.tab,
       minWidth:10,
-      marginLeft:'25px',
+      marginLeft:'10px',
       paddingLeft: '20px',
       paddingRight: '20px',
       color: 'white',
@@ -112,7 +112,7 @@ function ElevationScroll(props) {
         },
         [theme.breakpoints.up('xs')]: {
           marginLeft: theme.spacing(1),
-          marginRight: theme.spacing(1),
+          marginRight: theme.spacing(4),
           width: 'auto',
         },
       },
@@ -160,6 +160,9 @@ function ElevationScroll(props) {
     },
     appBar:{
       zIndex: theme.zIndex.modal + 1
+    },
+    buttonMargin: {
+      marginTop: '10px'
     }
   }))
   
@@ -215,10 +218,10 @@ export default function Header ({props,placeholder, handleChange}) {
                     </ListItemText>
                     </ListItem>
             </List>
-            <Button  variant="contained" color="secondary" href="http://smp.vin.ua/joomla/">
+            <Button className={classes.buttonMargin} variant="contained" color="secondary" href="http://smp.vin.ua/joomla/">
             СМП
             </Button>
-            <Button variant="contained" color="primary" href="http://smp.vin.ua/wordpress/">
+            <Button className={classes.buttonMargin} variant="contained" color="secondary" href="http://smp.vin.ua/wordpress/">
             ІАЦ
           </Button>
             </SwipeableDrawer> 
